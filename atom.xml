@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>洛奇亚の小窝</title>
+  
+  
+  <link href="http://example.com/atom.xml" rel="self"/>
+  
+  <link href="http://example.com/"/>
+  <updated>2022-12-12T15:39:31.661Z</updated>
+  <id>http://example.com/</id>
+  
+  <author>
+    <name>洛奇亚</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>方块竞速游戏介绍</title>
+    <link href="http://example.com/2022/12/12/BlockRacing%E4%BB%8B%E7%BB%8D/"/>
+    <id>http://example.com/2022/12/12/BlockRacing%E4%BB%8B%E7%BB%8D/</id>
+    <published>2022-12-12T09:31:14.000Z</published>
+    <updated>2022-12-12T15:39:31.661Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="方块竞速BlockRacing"><a href="#方块竞速BlockRacing" class="headerlink" title="方块竞速BlockRacing"></a>方块竞速BlockRacing</h1><p>这是一个Minecraft多人竞速小游戏，分为两个队伍，先收集完指定方块的队伍获胜。</p><p>版本：Java 1.19.2</p><p>条件允许可以去<a href="https://github.com/LQSnow/BlockRacing">Github</a>看</p><h1 id="特色功能"><a href="#特色功能" class="headerlink" title="特色功能"></a>特色功能</h1><ol><li>队伍箱子：每个队伍都有3个队伍箱子，箱子里的物品对同队伍成员共享。</li><li>奖励机制：每收集一个方块，对方队伍将会获得一组该方块（存放在队伍箱子里）。</li><li>队伍TP：同队伍之间可以自由TP。</li><li>Roll：当前所需方块太难获取时，可以轮换掉，每局仅限一次。</li><li>定位：玩家可以花费队伍积分购买find指令，用于定位群系或结构。</li><li>记录点：每个队伍有3个记录点，可以自由保存、传送、删除。</li></ol><span id="more"></span><h1 id="玩法说明"><a href="#玩法说明" class="headerlink" title="玩法说明"></a>玩法说明</h1><h2 id="准备阶段"><a href="#准备阶段" class="headerlink" title="准备阶段"></a>准备阶段</h2><ul><li><p>进入游戏后，打开聊天框进行选队，随后使用&#x2F;prepare指令准备。</p></li><li><p>输入&#x2F;settings指令打开目标方块库设置菜单，可以选择性开启中等难度方块、困难难度方块、染色方块和末地方块。</p></li><li><p>输入&#x2F;blockracing &lt;amount&gt;指令可以设置目标方块数量。</p></li><li><p>所有玩家准备后，输入&#x2F;start指令即可开始游戏。</p></li></ul><h2 id="游戏阶段"><a href="#游戏阶段" class="headerlink" title="游戏阶段"></a>游戏阶段</h2><ul><li><p>随机传送后，按照记分板上的内容，开始收集方块吧。</p></li><li><p>输入&#x2F;cd指令可以打开菜单，在菜单里可以使用队伍箱子、Roll、定位、记录点功能。</p></li><li><p>购买定位权限后，可以输入&#x2F;find &lt;structure | biome&gt; &lt;name&gt;进行定位（与&#x2F;locate命令使用方式一样）。</p></li><li><p>输入&#x2F;btp &lt;teammates&gt;可以TP队友。</p></li></ul><h1 id="指令列表"><a href="#指令列表" class="headerlink" title="指令列表"></a>指令列表</h1><p>注释：</p><ul><li>&lt;&gt; — 必填内容</li><li>| — 或</li></ul><table><thead><tr><th>名称</th><th>用法</th><th>描述</th></tr></thead><tbody><tr><td>prepare</td><td>&#x2F;prepare</td><td>准备好开始游戏后，输入该指令。</td></tr><tr><td>settings</td><td>&#x2F;settings</td><td>打开目标方块库设置菜单，可以选择性开启中等难度方块、困难难度方块、染色方块和末地方块。</td></tr><tr><td>blockracing</td><td>&#x2F;blockracing &lt;amount&gt;</td><td>设置当局游戏方块数量，最低10。</td></tr><tr><td>start</td><td>&#x2F;start</td><td>所有人准备后，输入此指令开始游戏。</td></tr><tr><td>cd</td><td>&#x2F;cd</td><td>打开菜单，在菜单里可以使用队伍箱子、Roll、定位、记录点功能。</td></tr><tr><td>find</td><td>&#x2F;find &lt;structure|biome&gt; &lt;name&gt;</td><td>定位（与&#x2F;locate命令使用方式一样）。</td></tr><tr><td>btp</td><td>&#x2F;btp &lt;teammates&gt;</td><td>TP队友。</td></tr></tbody></table><h1 id="安装教程"><a href="#安装教程" class="headerlink" title="安装教程"></a>安装教程</h1><ol><li><p>准备一个Paper服务器</p></li><li><p>下载插件，将插件放到服务器目录下的<code>plugins</code>文件夹中</p><p>下载链接：<a href="https://github.com/LQSnow/BlockRacing/releases/">BlockRacing Releases</a></p></li><li><p>（<strong>推荐</strong>）在<code>server.properties</code>文件中，更改如下设置：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">pvp=false</span><br><span class="line">seed=</span><br></pre></td></tr></table></figure><p>推荐关闭PVP，让玩家沉浸于方块收集。</p><p>推荐将种子留空，玩完一局后将<code>world</code> <code>world_nether</code> <code>world_the_end</code>三个文件夹删除，起到重置种子的作用。</p><p>你也可以更改服务器启动文件（start.bat）以自动重启、自动重置种子（seed必须留空）：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">:start</span><br><span class="line">java -Xmx4G -Xms4G -jar server.jar nogui</span><br><span class="line">rd /s /q world</span><br><span class="line">rd /s /q world_nether</span><br><span class="line">rd /s /q world_the_end</span><br><span class="line">timeout /nobreak /t 5</span><br><span class="line">goto start</span><br></pre></td></tr></table></figure><p>记得修改server.jar为你的服务器核心文件名，并按实际情况分配内存。</p></li></ol><h1 id="目标方块库修改"><a href="#目标方块库修改" class="headerlink" title="目标方块库修改"></a>目标方块库修改</h1><p>在服务器文件夹下的plugins\BlockRacing目录中，存在下面这几个文件：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">EasyBlocks.txt 简单方块库</span><br><span class="line">NormalBlocks.txt 中等方块库</span><br><span class="line">HardBlocks.txt 困难方块库</span><br><span class="line">DyedBlocks.txt 染色方块库</span><br><span class="line">EndBlocks.txt 末地方块库</span><br><span class="line">zh_cn.json 翻译文件</span><br></pre></td></tr></table></figure><p>除了翻译文件，剩下的方块库文件你可以自由修改，但请注意：</p><ol><li><p>每行只写一个方块名</p></li><li><p>方块名使用全大写的方块命名空间</p></li><li><p>5个方块库中不要有重复方块</p></li><li><p>不要有空行、空格等字符</p></li><li><p>不要修改文件名，不要删除文件</p></li><li><p>游戏内除了简单方块库必选以外，剩下的都可以选择性开启，如非特殊需要不要动这5个文件</p></li></ol><h1 id="意见反馈"><a href="#意见反馈" class="headerlink" title="意见反馈"></a>意见反馈</h1><p>游戏反馈：<a href="https://docs.qq.com/form/page/DU0Fvc0xtUmZWRUJN">https://docs.qq.com/form/page/DU0Fvc0xtUmZWRUJN</a></p><p>联系方式：</p><blockquote><p> 邮箱：<a href="mailto:&#108;&#113;&#95;&#115;&#x6e;&#x6f;&#x77;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#x6d;">&#108;&#113;&#95;&#115;&#x6e;&#x6f;&#x77;&#64;&#111;&#x75;&#x74;&#x6c;&#x6f;&#x6f;&#107;&#46;&#x63;&#111;&#x6d;</a></p><p> QQ：2784628010</p><p> 博客：lqsnow.top</p></blockquote><h1 id="版权说明"><a href="#版权说明" class="headerlink" title="版权说明"></a>版权说明</h1><p>该项目签署 <a href="https://github.com/LQSnow/BlockRacing/blob/main/LICENSE"><strong>GNU Affero General Public License v3.0</strong></a> 授权许可</p><p>The project is licensed under the <a href="https://github.com/LQSnow/BlockRacing/blob/main/LICENSE"><strong>GNU Affero General Public License v3.0</strong></a></p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;方块竞速BlockRacing&quot;&gt;&lt;a href=&quot;#方块竞速BlockRacing&quot; class=&quot;headerlink&quot; title=&quot;方块竞速BlockRacing&quot;&gt;&lt;/a&gt;方块竞速BlockRacing&lt;/h1&gt;&lt;p&gt;这是一个Minecraft多人竞速小游戏，分为两个队伍，先收集完指定方块的队伍获胜。&lt;/p&gt;
+&lt;p&gt;版本：Java 1.19.2&lt;/p&gt;
+&lt;p&gt;条件允许可以去&lt;a href=&quot;https://github.com/LQSnow/BlockRacing&quot;&gt;Github&lt;/a&gt;看&lt;/p&gt;
+&lt;h1 id=&quot;特色功能&quot;&gt;&lt;a href=&quot;#特色功能&quot; class=&quot;headerlink&quot; title=&quot;特色功能&quot;&gt;&lt;/a&gt;特色功能&lt;/h1&gt;&lt;ol&gt;
+&lt;li&gt;队伍箱子：每个队伍都有3个队伍箱子，箱子里的物品对同队伍成员共享。&lt;/li&gt;
+&lt;li&gt;奖励机制：每收集一个方块，对方队伍将会获得一组该方块（存放在队伍箱子里）。&lt;/li&gt;
+&lt;li&gt;队伍TP：同队伍之间可以自由TP。&lt;/li&gt;
+&lt;li&gt;Roll：当前所需方块太难获取时，可以轮换掉，每局仅限一次。&lt;/li&gt;
+&lt;li&gt;定位：玩家可以花费队伍积分购买find指令，用于定位群系或结构。&lt;/li&gt;
+&lt;li&gt;记录点：每个队伍有3个记录点，可以自由保存、传送、删除。&lt;/li&gt;
+&lt;/ol&gt;</summary>
+    
+    
+    
+    <category term="Bukkit插件" scheme="http://example.com/categories/Bukkit%E6%8F%92%E4%BB%B6/"/>
+    
+    
+    <category term="方块竞速" scheme="http://example.com/tags/%E6%96%B9%E5%9D%97%E7%AB%9E%E9%80%9F/"/>
+    
+    <category term="Bukkit插件" scheme="http://example.com/tags/Bukkit%E6%8F%92%E4%BB%B6/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft下载与安装</title>
+    <link href="http://example.com/2022/12/06/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/"/>
+    <id>http://example.com/2022/12/06/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/</id>
+    <published>2022-12-06T05:12:20.000Z</published>
+    <updated>2022-12-12T15:46:12.576Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>本文章介绍的并非网易我的世界的下载安装，而是Minecraft Java Edition，也就是Java版Minecraft。</p><p>本教程基于Windows操作系统进行教学，如果使用的是其他操作系统，可以直接联系我，手把手教你（</p><p>你只需要准备：一台电脑，一个鼠标。</p> <span id="more"></span><h1 id="安装Java"><a href="#安装Java" class="headerlink" title="安装Java"></a>安装Java</h1><p>第一步，安装Java。<a href="https://share.weiyun.com/Hxo83V16">点我下载</a></p><p>文件夹中有三个版本，下载jdk17就可以了。</p><p>下载完成后双击运行，一路Next即可。</p><h1 id="安装启动器"><a href="#安装启动器" class="headerlink" title="安装启动器"></a>安装启动器</h1><p>想要运行mc，需要一个启动器。首推PCL2(Plain Craft Launcher 2)。<a href="https://share.weiyun.com/AnWHjT9C">点我下载</a></p><p>选一个地方，新建一个文件夹，专门用来存放mc相关的东西。把启动器放进去，右键新建快捷方式，再把快捷方式放到桌面，这样就方便多了。</p><h1 id="配置游戏"><a href="#配置游戏" class="headerlink" title="配置游戏"></a>配置游戏</h1><p>双击打开PCL2，你的界面应该是这样子的。</p><p><img src="/../images/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/%E7%99%BB%E5%BD%95%E5%90%AF%E5%8A%A8%E5%99%A8.png"></p><p>下面我们进行一些初始化操作。</p><p>点击顶部横栏中的<strong>设置</strong>选项。</p><p>接下来，像我这样设置。（如果找不到Java，点击一下<strong>自动搜索</strong>就可以了）</p><p><img src="/../images/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/%E8%AE%BE%E7%BD%AE.png"></p><p>设置完成后，顶栏回到<strong>启动</strong>。</p><p>如果你没有正版账号，选择<strong>离线</strong>并输入用户名，即可离线登录。</p><p><img src="/../images/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/%E7%99%BB%E5%BD%95%E5%90%AF%E5%8A%A8%E5%99%A8.png"></p><p>当然，我还是更推荐花89RMB购买正版账号。购买流程看我的另一篇文章。</p><h1 id="下载游戏"><a href="#下载游戏" class="headerlink" title="下载游戏"></a>下载游戏</h1><p>点击顶栏的<strong>下载</strong>，选择最新版本1.19.2。</p><p><img src="/../images/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/%E4%B8%8B%E8%BD%BD%E6%B8%B8%E6%88%8F1.png"></p><p>这个界面看不懂？没事，直接点击<strong>开始安装</strong>就行了。</p><p><img src="/../images/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/%E4%B8%8B%E8%BD%BD%E6%B8%B8%E6%88%8F2.png"></p><p>回到主界面，点击<strong>启动游戏</strong>，开启你的Minecraft旅程吧。</p>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;本文章介绍的并非网易我的世界的下载安装，而是Minecraft Java Edition，也就是Java版Minecraft。&lt;/p&gt;
+&lt;p&gt;本教程基于Windows操作系统进行教学，如果使用的是其他操作系统，可以直接联系我，手把手教你（&lt;/p&gt;
+&lt;p&gt;你只需要准备：一台电脑，一个鼠标。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Minecraft新手教学" scheme="http://example.com/categories/Minecraft%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%A6/"/>
+    
+    
+    <category term="Minecraft" scheme="http://example.com/tags/Minecraft/"/>
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="新手" scheme="http://example.com/tags/%E6%96%B0%E6%89%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Minecraft购买教程</title>
+    <link href="http://example.com/2022/12/05/Minecraft%E8%B4%AD%E4%B9%B0%E6%95%99%E7%A8%8B/"/>
+    <id>http://example.com/2022/12/05/Minecraft%E8%B4%AD%E4%B9%B0%E6%95%99%E7%A8%8B/</id>
+    <published>2022-12-05T09:28:12.000Z</published>
+    <updated>2022-12-06T13:49:23.416Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>很多萌新都会有一个问题：正版账号与离线账号有什么区别？既然离线账号能正常游玩，为什么要买正版？</p><p>因为，离线账号虽然可以玩单人，但玩不了大部分的服务器，只有极少数服务器会允许离线账号登录。</p><p>并且，购买正版账号也是对游戏的尊重。离线账号，说难听一点就是盗版账号。所以，如果有经济能力，一定要购买正版。</p><p>目前的价格是89RMB，而且能同时购买Java版和基岩版两个版本。要知道在以前，单单Java版就要165RMB，基岩版就要71RMB。</p><p>好了，废话不多说，开始教学。</p> <span id="more"></span><h1 id="注册微软邮箱"><a href="#注册微软邮箱" class="headerlink" title="注册微软邮箱"></a>注册微软邮箱</h1><p>首先，你需要准备一个微软邮箱。前往<a href="https://outlook.live.com/owa/">微软邮箱官网</a>，点击<code>创建免费账户</code>，跟着引导一步步走就可以了。</p><p>特别提醒一下，设置生日的时候，一定要设定大于18岁的生日，不用填真实生日。已经注册完的也没关系，可以随便改。</p><h1 id="购买Minecraft"><a href="#购买Minecraft" class="headerlink" title="购买Minecraft"></a>购买Minecraft</h1><p>进入<a href="https://www.minecraft.net/zh-hans">Minecraft官网</a>，如果出现这个界面，点击这里就可以关闭了。（这个按钮是真的隐蔽）</p><p><img src="/../images/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/%E5%AE%98%E7%BD%91%E6%8F%90%E7%A4%BA.png"></p><p>点击<code>获取MINECRAFT</code>，一路跟着引导走就可以了。</p><p>注意，在设定用户名的时候，需要设置两个。第一个是Xbox用户名，第二个是mc用户名。这两个的命名规则不太一样。Xbox用户名由大小写字母数字组成，mc用户名由大小写字母数字下划线组成。设置时一定要慎重考虑，这俩用户名都不太好改。</p><p>付款完成后的订单号一定要保存好，以后账号丢了可以用它找回。</p><p>设定皮肤去<a href="https://namemc.com/">namemc</a>找找吧，肯定有你喜欢的。</p><p>最后，整个购买就完成了。要登录的话，请使用启动器内的<strong>微软登录</strong>，输入微软邮箱的账号密码就可以了。</p><table><thead><tr><th align="center"><strong>恭喜你成为了Minecraft正版玩家！</strong></th></tr></thead></table>]]></content>
+    
+    
+    <summary type="html">&lt;h1 id=&quot;前言&quot;&gt;&lt;a href=&quot;#前言&quot; class=&quot;headerlink&quot; title=&quot;前言&quot;&gt;&lt;/a&gt;前言&lt;/h1&gt;&lt;p&gt;很多萌新都会有一个问题：正版账号与离线账号有什么区别？既然离线账号能正常游玩，为什么要买正版？&lt;/p&gt;
+&lt;p&gt;因为，离线账号虽然可以玩单人，但玩不了大部分的服务器，只有极少数服务器会允许离线账号登录。&lt;/p&gt;
+&lt;p&gt;并且，购买正版账号也是对游戏的尊重。离线账号，说难听一点就是盗版账号。所以，如果有经济能力，一定要购买正版。&lt;/p&gt;
+&lt;p&gt;目前的价格是89RMB，而且能同时购买Java版和基岩版两个版本。要知道在以前，单单Java版就要165RMB，基岩版就要71RMB。&lt;/p&gt;
+&lt;p&gt;好了，废话不多说，开始教学。&lt;/p&gt;</summary>
+    
+    
+    
+    <category term="Minecraft新手教学" scheme="http://example.com/categories/Minecraft%E6%96%B0%E6%89%8B%E6%95%99%E5%AD%A6/"/>
+    
+    
+    <category term="Minecraft" scheme="http://example.com/tags/Minecraft/"/>
+    
+    <category term="教程" scheme="http://example.com/tags/%E6%95%99%E7%A8%8B/"/>
+    
+    <category term="新手" scheme="http://example.com/tags/%E6%96%B0%E6%89%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>欢迎！</title>
+    <link href="http://example.com/2022/12/04/welcome/"/>
+    <id>http://example.com/2022/12/04/welcome/</id>
+    <published>2022-12-04T11:54:01.000Z</published>
+    <updated>2022-12-12T15:39:25.386Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>你好呀，欢迎来到洛奇亚的博客。<br>侧边栏中可以切换到不同的页面，去逛一逛吧。（手机端点左上角）</p></blockquote><h1 id="合集"><a href="#合集" class="headerlink" title="合集"></a>合集</h1><h2 id="方块竞速"><a href="#方块竞速" class="headerlink" title="方块竞速"></a>方块竞速</h2><p>我的第一个项目。看介绍点击<a href="https://lqsnow.top/2022/12/12/BlockRacing%E4%BB%8B%E7%BB%8D/">游戏介绍</a>，下载插件去<a href="https://github.com/LQSnow/BlockRacing/releases/">BlockRacing Releases</a></p><p><a href="https://lqsnow.top/2022/12/12/BlockRacing%E4%BB%8B%E7%BB%8D/">游戏介绍</a></p><p><a href="https://github.com/LQSnow/BlockRacing">Github</a></p><h2 id="Minecraft新手教学"><a href="#Minecraft新手教学" class="headerlink" title="Minecraft新手教学"></a>Minecraft新手教学</h2><p>如果想先免费体验一下MC，可以直接看<a href="https://lqsnow.top/2022/12/06/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/">Minecraft下载与安装</a>，用离线账号登录（免费），等决定好了再买也不迟。</p><p><a href="https://lqsnow.top/2022/12/05/Minecraft%E8%B4%AD%E4%B9%B0%E6%95%99%E7%A8%8B/">Minecraft购买教程</a><br><a href="https://lqsnow.top/2022/12/06/Minecraft%E4%B8%8B%E8%BD%BD%E4%B8%8E%E5%AE%89%E8%A3%85/">Minecraft下载与安装</a> </p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;blockquote&gt;
+&lt;p&gt;你好呀，欢迎来到洛奇亚的博客。&lt;br&gt;侧边栏中可以切换到不同的页面，去逛一逛吧。（手机端点左上角）&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h1 id=&quot;合集&quot;&gt;&lt;a href=&quot;#合集&quot; class=&quot;headerlink&quot; title=&quot;合集&quot;&gt;</summary>
+      
+    
+    
+    
+    
+  </entry>
+  
+</feed>
