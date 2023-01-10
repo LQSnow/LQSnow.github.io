@@ -32,7 +32,7 @@
 <meta property="og:locale" content="zh_CN">
 <meta property="og:image" content="http://example.com/images/%E6%9C%8D%E5%8A%A1%E5%99%A8%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B/eula.png">
 <meta property="article:published_time" content="2023-01-07T08:08:34.000Z">
-<meta property="article:modified_time" content="2023-01-07T08:46:37.844Z">
+<meta property="article:modified_time" content="2023-01-10T02:32:35.052Z">
 <meta property="article:author" content="洛奇亚">
 <meta property="article:tag" content="Minecraft">
 <meta property="article:tag" content="教程">
@@ -232,10 +232,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">发表于</span>
-              
 
-              <time title="创建时间：2023-01-07 16:08:34 / 修改时间：16:46:37" itemprop="dateCreated datePublished" datetime="2023-01-07T16:08:34+08:00">2023-01-07</time>
+              <time title="创建时间：2023-01-07 16:08:34" itemprop="dateCreated datePublished" datetime="2023-01-07T16:08:34+08:00">2023-01-07</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">更新于</span>
+                <time title="修改时间：2023-01-10 10:32:35" itemprop="dateModified" datetime="2023-01-10T10:32:35+08:00">2023-01-10</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -252,14 +258,14 @@
                 <i class="far fa-file-word"></i>
               </span>
                 <span class="post-meta-item-text">本文字数：</span>
-              <span>1.3k</span>
+              <span>2k</span>
             </span>
             <span class="post-meta-item" title="阅读时长">
               <span class="post-meta-item-icon">
                 <i class="far fa-clock"></i>
               </span>
                 <span class="post-meta-item-text">阅读时长 &asymp;</span>
-              <span>1 分钟</span>
+              <span>2 分钟</span>
             </span>
 
         </div>
@@ -281,6 +287,8 @@
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">java -Xms2G -Xmx2G -jar server.jar nogui</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
 
 <p>什么意思呢？我们一个一个看。</p>
+<span id="more"></span>
+
 <p>行首的<code>java</code>，意思是调用java程序来执行。如果版本遇到问题，你可以手动指定要运行的java版本，只需要将<code>java</code>替换成java程序的绝对路径即可。默认路径为”C:\Program Files\Java\jdk-17.0.4\bin\java.exe”。因此，如果我想用特定版本的java，而不是默认的最新版，比如使用jdk16运行服务端，可以这么写：</p>
 <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&quot;C:\Program Files\Java\jdk-16.0.2\bin\java.exe&quot; -Xms2G -Xmx2G -jar server.jar nogui</span><br><span class="line">pause</span><br></pre></td></tr></table></figure>
 
@@ -299,10 +307,21 @@
 <p>里面是服务器的一些基本设置，看不懂没关系，<a target="_blank" rel="noopener" href="https://minecraft.fandom.com/zh/wiki/Server.properties?so=search">Wiki</a>上有详细解释。</p>
 <p>这里留意一下，如果没有特殊要求，server-ip一定要留空，也就是默认的127.0.0.1。server-port默认是25565，如果端口占用，可以修改。</p>
 <p>保存关闭，接下来，服务器就可以正式启动了。</p>
-<h2 id="第二次运行"><a href="#第二次运行" class="headerlink" title="第二次运行"></a>第二次运行</h2><p>再次双击start.bat，服务器正式启动！</p>
+<h2 id="第二次运行"><a href="#第二次运行" class="headerlink" title="第二次运行"></a>第二次运行</h2><p>再次双击<code>start.bat</code>，服务器正式启动！</p>
 <p>当你看到日志中出现<code>DONE</code>字眼时，就代表服务器启动成功了。</p>
 <p>那么其他玩家该如何进入服务器呢？别急，你还需要<strong>映射</strong>。映射方法会在后文写到。</p>
 <h1 id="Forge开服教程"><a href="#Forge开服教程" class="headerlink" title="Forge开服教程"></a>Forge开服教程</h1><p>Forge服务端比较特殊，因此单独来讲。</p>
+<p>首先，前往<a target="_blank" rel="noopener" href="https://files.minecraftforge.net/net/minecraftforge/forge/">Forge官方网站</a>下载对应的版本，然后，直接双击运行下载的jar文件。</p>
+<p>选择<code>Install Server</code>，点击右下角三个点，选择你的服务器文件夹，点击<code>确定</code>，接下来就开始安装了。等待安装完成后，后续步骤就与上文“第一次运行”的内容基本一样了。不同的是，forge服务器自带<code>run.bat</code>。</p>
+<h1 id="服务器映射"><a href="#服务器映射" class="headerlink" title="服务器映射"></a>服务器映射</h1><p>开启了服务器后，只有局域网可以连接。那么如何让来自世界各地的玩家也能加入进来呢？我们需要进行<strong>内网穿透</strong>。</p>
+<p>这里我将讲解<strong>樱花映射</strong>的映射方法。（樱花映射即SAKURA FRP，每天可以领取免费流量，相当于免费映射，不过实名认证需要花费1块钱。你也可以选择购买VIP会员，价格也很实惠（不是广告（）</p>
+<p>首先，前往<a target="_blank" rel="noopener" href="https://www.natfrp.com/">樱花映射官网</a>，注册账号实名认证下载软件这里不再阐述，官网上有详细教程。</p>
+<p>接下来，你需要先启动服务器。打开樱花映射软件后，新建隧道时，在左侧列表里找到进程名为<code>java</code>的一项，点击后右边会自动填入服务器IP和端口，你只需要填写隧道名称并选择穿透节点，剩下的默认即可。</p>
+<p>创建隧道后，点击滑块启动隧道，然后在左侧<code>日志</code>一栏可以发现下面内容：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">Tunnel/隧道名 TCP 类型隧道启动成功</span><br><span class="line">Tunnel/隧道名 使用 [cn-zz-xx-xx.natfrp.cloud:xxxxx] 来连接到你的隧道</span><br><span class="line">Tunnel/隧道名 或使用 IP 地址连接（不推荐）：[xxx.xxx.xxx.xxx:xxxxx]</span><br></pre></td></tr></table></figure>
+
+<p>第二行和第三行中中括号里的东西就是服务器IP了，两种IP都可以连接。</p>
+<p>把IP发给你的朋友，让TA在多人游戏列表里输入你的IP，就能加入你的服务器啦。</p>
 
     </div>
 
@@ -385,7 +404,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fabric-amp-Bukkit%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">Fabric&amp;Bukkit开服教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="nav-number">2.3.</span> <span class="nav-text">第一次运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="nav-number">2.4.</span> <span class="nav-text">第二次运行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forge%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">Forge开服教程</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#%E5%89%8D%E8%A8%80"><span class="nav-number">1.</span> <span class="nav-text">前言</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Fabric-amp-Bukkit%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B"><span class="nav-number">2.</span> <span class="nav-text">Fabric&amp;Bukkit开服教程</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E4%B8%8B%E8%BD%BD"><span class="nav-number">2.1.</span> <span class="nav-text">下载</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E5%87%86%E5%A4%87%E5%B7%A5%E4%BD%9C"><span class="nav-number">2.2.</span> <span class="nav-text">准备工作</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%B8%80%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="nav-number">2.3.</span> <span class="nav-text">第一次运行</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E7%AC%AC%E4%BA%8C%E6%AC%A1%E8%BF%90%E8%A1%8C"><span class="nav-number">2.4.</span> <span class="nav-text">第二次运行</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Forge%E5%BC%80%E6%9C%8D%E6%95%99%E7%A8%8B"><span class="nav-number">3.</span> <span class="nav-text">Forge开服教程</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%98%A0%E5%B0%84"><span class="nav-number">4.</span> <span class="nav-text">服务器映射</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
